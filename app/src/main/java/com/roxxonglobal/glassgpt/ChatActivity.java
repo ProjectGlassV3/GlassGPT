@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.HashMap;
 import java.time.Duration;
 
+import android.os.StrictMode;
 
 import com.theokanning.openai.completion.chat.ChatCompletionRequest;
 import com.theokanning.openai.completion.chat.ChatMessage;
@@ -21,7 +22,6 @@ import com.theokanning.openai.completion.chat.ChatMessageRole;
 import com.theokanning.openai.service.OpenAiService;
 import com.theokanning.openai.completion.CompletionRequest;
 import com.theokanning.openai.image.CreateImageRequest;
-
 
 import android.os.Bundle;
 
@@ -64,12 +64,18 @@ public class ChatActivity extends AppCompatActivity implements
             Log.d(TAG, "Result not OK");
         }
         String gptResponse = null;
-        CompletionRequest completionRequest = CompletionRequest.builder()
-                .prompt(speechResult)
-                .model("gpt-4-1106-preview")
-                .echo(true)
-                .build();
-        service.createCompletion(completionRequest).getChoices().forEach(System.out::println);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        List<ChatMessage> chatMessageList = new ArrayList<>();
+        ChatMessage chatMessage = new ChatMessage();
+        chatMessage.setContent(speechResult);
+        chatMessage.setRole("user");
+        chatMessageList.add(chatMessage);
+
+        ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
+                .model("gpt-3.5-turbo")
+                .messages(chatMessageList).build();
+        service.createChatCompletion(chatCompletionRequest);
     }
 
     @Override
