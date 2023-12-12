@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GlassGPT</string>
+    <string name="voice_instruction">Tap to talk to GPT</string>
+</resources>
