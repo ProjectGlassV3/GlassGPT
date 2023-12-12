@@ -36,7 +36,7 @@ public class ChatActivity extends AppCompatActivity implements
     private GlassGestureDetector glassGestureDetector;
     private List<String> mVoiceResults = new ArrayList<>(4);
 
-    OpenAiService service = new OpenAiService("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");
+    OpenAiService service = new OpenAiService(Secrets.API_KEY);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class ChatActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_chat);
         resultTextView = findViewById(R.id.results);
         glassGestureDetector = new GlassGestureDetector(this, this);
-        OpenAiService service = new OpenAiService("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");
+        OpenAiService service = new OpenAiService(Secrets.API_KEY);
 
     }
 
