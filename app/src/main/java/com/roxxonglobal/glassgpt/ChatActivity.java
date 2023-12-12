@@ -73,9 +73,10 @@ public class ChatActivity extends AppCompatActivity implements
         chatMessageList.add(chatMessage);
 
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
-                .model("gpt-3.5-turbo")
+                .model("gpt-4-1106-preview")
                 .messages(chatMessageList).build();
-        service.createChatCompletion(chatCompletionRequest);
+        ChatMessage responseMessage = service.createChatCompletion(chatCompletionRequest).getChoices().get(0).getMessage();
+        updateUI(responseMessage.getContent());
     }
 
     @Override
