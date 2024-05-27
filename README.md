@@ -2,7 +2,7 @@
 # GlassGPT
 GlassGPT is an Android application for Google Glass Enterprise Edition 2 that interacts with OpenAI's advanced language model, GPT-4. Users can make requests and get text predictions from the model directly on their Google Glass device.
 
-Fast and efficient interaction with OpenAI's GPT-4 model. On-demand generation and display of AI responses. 
+Fast and efficient interaction with OpenAI's GPT-4o model. On-demand generation and display of AI responses. 
 
 Build Instructions
 ```
@@ -125,9 +125,13 @@ Use the following Hardware Profile when creating a new AVD:
 </d:devices>
 ```
 
-# TO-DO
+# In Progress
  - Implementing GPT vision support.
- - Still Image Translation support. (Originally planned to be Live Translate, but there's no cost effective way to continously send images to OpenAI's API.
+ - Implementing Always On listening.
+ - Migrating off the OpenAI-Java library to Retrofit w/ Azure OpenAI service.
+
+# TO-DO
+ - Still Image Translation support. (Originally planned to be Live Translate, but there's no cost effective way to continuously send images to OpenAI's API.
 
 # License
 Additional details can be found in the LICENSE file.
