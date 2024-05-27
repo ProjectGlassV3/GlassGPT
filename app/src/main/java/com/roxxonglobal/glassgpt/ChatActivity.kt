@@ -47,12 +47,10 @@ class ChatActivity : AppCompatActivity(), OnGestureListener {
         requestVoiceRecognition()
         true
       }
-
       SWIPE_DOWN -> {
         finish()
         true
       }
-
       else -> false
     }
   }

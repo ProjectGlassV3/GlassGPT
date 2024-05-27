@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
   id("com.android.application")
   id("kotlin-android")
@@ -12,8 +14,8 @@ android {
     minSdk = 27
     targetSdk = 34
 
-    versionCode = 1
-    versionName = "1.0"
+    versionCode = 2
+    versionName = "2.0.0.0"
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
@@ -23,22 +25,32 @@ android {
     buildConfig = true
   }
 
+  val localProperties = Properties()
+  val localPropertiesFile = rootProject.file("local.properties")
+  if (localPropertiesFile.exists()) {
+    localPropertiesFile.inputStream().use { inputStream ->
+      localProperties.load(inputStream)
+    }
+  }
+
+  val apiKey: String = localProperties.getProperty("azure_openai_api_key", "")
+  val endpoint: String = localProperties.getProperty("azure_openai_endpoint", "")
+
   buildTypes {
     getByName("debug") {
-      // TODO: please pull this from your local.properties file
-      buildConfigField("String", "API_KEY", "\"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\"")
+      buildConfigField("String", "AZURE_OPENAI_API_KEY", "\"$apiKey\"")
+      buildConfigField("String", "AZURE_OPENAI_ENDPOINT", "\"$endpoint\"")
     }
 
     getByName("release") {
       isMinifyEnabled = false
       proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
 
-      // TODO: please pull this from your local.properties file
-      buildConfigField(
-        "String", "API_KEY", "\"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\""
-      )
+      buildConfigField("String", "AZURE_OPENAI_API_KEY", "\"$apiKey\"")
+      buildConfigField("String", "AZURE_OPENAI_ENDPOINT", "\"$endpoint\"")
     }
   }
+
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
