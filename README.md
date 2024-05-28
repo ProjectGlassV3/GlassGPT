@@ -7,17 +7,25 @@ Fast and efficient interaction with OpenAI's GPT-4o model. On-demand generation 
 Build Instructions
 ```
 # Clone this repository
-$ git clone https://github.com/ProjectOpenCannibal/GlassGPT.git
+$ git clone https://github.com/RoxxonOpenSource/GlassGPT.git
 
 # Go into the repository
 $ cd GlassGPT
 ```
-You also need to have your OpenAI API key. Edit the Secrets.java file in the src folder of the project and add your OpenAI API key.
+You also need to have your **Azure** OpenAI API key, Azure computer Vision Secrets, and Azure Storage Secrets. You need to add it to your local.properties as shown below:
+```
+azure_openai_api_key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+azure_openai_endpoint=https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.openai.azure.com/
+azure.computer.vision.key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+azure.computer.vision.endpoint=https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.cognitiveservices.azure.com/
+azure_storage_connection_string=DefaultEndpointsProtocol=https;AccountName=XXXXXXXXXXXXXXXX;AccountKey=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;EndpointSuffix=core.windows.net
+azure_storage_container_name=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
 
 After setting the API key, import the project into Android Studio. Then you can build the project and run it on your Google Glass device!
 
 # Usage
-To interact with the AI, open the GlassGPT app from the launcher, tap, then speak your command or request. The AI response will then be fetched and displayed directly on the Google Glass screen.
+To interact with the AI, open the Assistant app from the launcher, tap, then speak your command or request. The AI response will then be fetched and displayed directly on the Google Glass screen.
 
 # Contributing
 We welcome contributions!
@@ -128,7 +136,6 @@ Use the following Hardware Profile when creating a new AVD:
 # In Progress
  - Implementing GPT vision support.
  - Implementing Always On listening.
- - Migrating off the OpenAI-Java library to Retrofit w/ Azure OpenAI service.
 
 # TO-DO
  - Still Image Translation support. (Originally planned to be Live Translate, but there's no cost effective way to continuously send images to OpenAI's API.
@@ -140,4 +147,4 @@ Additional details can be found in the LICENSE file.
 For any inquiries or issues, please open an issue in this GitHub repository.
 
 # Thanks
-Special thanks to the Glass Enterprise team for their [code samples](https://github.com/googlesamples/glass-enterprise-samples), t3mr0i for the idea as it was based on his [implementation](https://github.com/t3mr0i/ChatGPTGlass) for the Explorer Edition, and theokanning for his [OpenAI API library](https://github.com/TheoKanning/openai-java)!
+Special thanks to the Glass Enterprise team for their [code samples](https://github.com/googlesamples/glass-enterprise-samples), t3mr0i for the idea as it was originally based off his [implementation](https://github.com/t3mr0i/ChatGPTGlass) for the Explorer Edition, and theokanning for his [OpenAI API library](https://github.com/TheoKanning/openai-java) when we used it!
