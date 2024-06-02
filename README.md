@@ -140,11 +140,17 @@ Use the following Hardware Profile when creating a new AVD:
 # TO-DO
  - Still Image Translation support. (Originally planned to be Live Translate, but there's no cost effective way to continuously send images to OpenAI's API.
 
-# License
-Additional details can be found in the LICENSE file.
+# Project Owner
+The current project owner is [Nigel Norris](https://github.com/TheNameIsNigel).
+
+# Contributors
+Special thanks to [Simon Sickle](https://github.com/simonsickle) for his major rewrite of the original project code!
+
+# Additional Thanks
+Special thanks to the Glass Enterprise team for their [code samples](https://github.com/googlesamples/glass-enterprise-samples), t3mr0i for the idea as it was originally based off his [implementation](https://github.com/t3mr0i/ChatGPTGlass) for the Explorer Edition, and theokanning for his [OpenAI API library](https://github.com/TheoKanning/openai-java) when we used it!
 
 # Contact
 For any inquiries or issues, please open an issue in this GitHub repository.
 
-# Thanks
-Special thanks to the Glass Enterprise team for their [code samples](https://github.com/googlesamples/glass-enterprise-samples), t3mr0i for the idea as it was originally based off his [implementation](https://github.com/t3mr0i/ChatGPTGlass) for the Explorer Edition, and theokanning for his [OpenAI API library](https://github.com/TheoKanning/openai-java) when we used it!
+# License
+Additional details can be found in the LICENSE file.
