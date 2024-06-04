@@ -26,6 +26,17 @@
             android:name="com.google.android.glass.TouchEnabledApplication"
             android:value="true" />
         <activity android:name=".ChatActivity"
+            android:label="Assistant"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.google.android.glass.category.DIRECTORY" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".TranslateActivity"
+            android:label="Translate"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
