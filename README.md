@@ -26,9 +26,10 @@ After setting the API key, import the project into Android Studio. Then you can 
 
 # Usage
 To interact with the AI, open the Assistant app from the launcher, tap, then speak your command or request. The AI response will then be fetched and displayed directly on the Google Glass screen, as well as read-back to the user using TTS.
+To interact with the Translation feature, open Translate from the launcher, tap, and then let it listen to the speech that you are wanting translated. The voice-to-text will be processed on device, and text sent to Azure OpenAI for translation with the response being fetched and displayed on the Glass screen, as well as read-back to the user using TTS.
 
 # Contributing
-We welcome contributions!
+We welcome contributions! Submit a pull request to the [Project Glass Gerrit instance](https://review.projectglass.xyz)
 
 # Development
 You can test this application on both physical Glass hardware, as well as with the Android Emulator in Android Studio.
@@ -153,4 +154,4 @@ Special thanks to the Glass Enterprise team for their [code samples](https://git
 For any inquiries or issues, please open an issue in this GitHub repository.
 
 # License
-Additional details can be found in the LICENSE file.
+This project is licensed under AGPL-3.0, retroactive to it's initial commit. If you are planning on using any of this code in another project, I would recommend you view the LICENSE file to ensure you are staying compliant with the license.
