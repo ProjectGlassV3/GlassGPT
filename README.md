@@ -25,7 +25,7 @@ azure_storage_container_name=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 After setting the API key, import the project into Android Studio. Then you can build the project and run it on your Google Glass device!
 
 # Usage
-To interact with the AI, open the Assistant app from the launcher, tap, then speak your command or request. The AI response will then be fetched and displayed directly on the Google Glass screen.
+To interact with the AI, open the Assistant app from the launcher, tap, then speak your command or request. The AI response will then be fetched and displayed directly on the Google Glass screen, as well as read-back to the user using TTS.
 
 # Contributing
 We welcome contributions!

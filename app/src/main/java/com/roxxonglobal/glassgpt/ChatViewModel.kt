@@ -15,6 +15,9 @@ class ChatViewModel : ViewModel() {
   private val _chatHistory = MutableLiveData<String>()
   val chatHistory: LiveData<String> = _chatHistory
 
+  private val _latestResponse = MutableLiveData<String>()
+  val latestResponse: LiveData<String> = _latestResponse
+
   fun requestResponse(voiceInput: String) {
     viewModelScope.launch {
       updateChatLog(voiceInput)
@@ -24,6 +27,7 @@ class ChatViewModel : ViewModel() {
       }
 
       updateChatLog(response)
+      _latestResponse.postValue(response)
     }
   }
 
