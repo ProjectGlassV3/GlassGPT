@@ -46,7 +46,6 @@ class TranslateActivity : AppCompatActivity(), OnGestureListener, TextToSpeech.O
     }
 
     override fun onDestroy() {
-        // Shutdown TTS when activity is destroyed
         if (tts.isSpeaking) {
             tts.stop()
         }

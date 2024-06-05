@@ -35,6 +35,21 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".CameraResults"
+            android:label="Intelligent Camera"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".IntelligentCamera"
+            android:label="Intelligent Camera"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.google.android.glass.category.DIRECTORY" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".TranslateActivity"
             android:label="Translate"
             android:exported="true">
