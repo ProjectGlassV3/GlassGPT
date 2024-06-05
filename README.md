@@ -25,9 +25,9 @@ azure_storage_container_name=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 After setting the API key, import the project into Android Studio. Then you can build the project and run it on your Google Glass device!
 
 # Usage
-To interact with the AI, open the Assistant app from the launcher, tap, then speak your command or request. The AI response will then be fetched and displayed directly on the Google Glass screen, as well as read-back to the user using TTS.
-To interact with Intelligent Camera, open the Intelligent Camera app from the launcher, tap, then look at what you want to search for and tap on Glass. The image will be sent directly to Computer Vision to describe the image, and the response will be fetched and displayed on the Glass screen. 
-To interact with the Translation feature, open Translate from the launcher, tap, and then let it listen to the speech that you are wanting translated. The voice-to-text will be processed on device, and text sent to Azure OpenAI for translation with the response being fetched and displayed on the Glass screen, as well as read-back to the user using TTS.
+- To interact with the AI, open the Assistant app from the launcher, tap, then speak your command or request. The AI response will then be fetched and displayed directly on the Google Glass screen, as well as read-back to the user using TTS.
+- To interact with Intelligent Camera, open the Intelligent Camera app from the launcher, tap, then look at what you want to search for and tap on Glass. The image will be sent directly to Computer Vision to describe the image, and the response will be fetched and displayed on the Glass screen. 
+- To interact with the Translation feature, open Translate from the launcher, tap, and then let it listen to the speech that you are wanting translated. The voice-to-text will be processed on device, and text sent to Azure OpenAI for translation with the response being fetched and displayed on the Glass screen, as well as read-back to the user using TTS.
 
 # Contributing
 We welcome contributions! Submit a pull request to the [Project Glass Gerrit instance](https://review.projectglass.xyz)
